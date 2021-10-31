@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ListItem from './ToDoList.js';
-import FooterText from './cardFooterText.jsx';
+import FooterText from './cardFooterText.js';
 import { useHistory } from 'react-router';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
