@@ -8,10 +8,10 @@ function Main() {
     const [inputList, setInputList] = useState();
     const [items, setItems] = useState([]);
 
-    const complete = [
+    // const complete = [
         
-    ];
-    const history = useHistory();
+    // ];
+    // const history = useHistory();
 
     const inputEvent = (e) => {
         setInputList(e.target.value)

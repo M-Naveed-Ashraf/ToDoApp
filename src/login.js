@@ -7,7 +7,7 @@ function Login() {
     let [userName, setUserName] = useState('');
     let [password, setPassword] = useState('');
 
-    let [user, setUser] = useState([]);
+    // let [user, setUser] = useState([]);
 
     const setInputs1 = (e) => {
         return setUserName(e.target.value)
@@ -22,7 +22,7 @@ function Login() {
 
     const authentic = () => {
         if(userName === 'abc' && password === '123') {
-            isAuth = true
+            setIsAuth(true);
         }
     }
 
