@@ -18,28 +18,29 @@ function Login() {
     }
     console.log(userName, password);
 
-    let [isAuth, setIsAuth] = useState(false);
+    // let [isAuth, setIsAuth] = useState(false);
+    // let isAuth = false;
 
-    const authentic = () => {
-        if(userName === 'abc' && password === '123') {
-            setIsAuth(true);
+    function authentic() {
+        if (userName === 'abc' && password === '123') {
+            // isAuth = true;
+            history.push("/main");
+        }
+        else {
+            alert('please enter the correct credentials (userName: abc, password: 123)');
         }
     }
 
     return(
         <div className="form w-25 mx-auto mt-5">
-            <input className="form-control" value={userName} type="text" onChange={setInputs1} placeholder="UserName" />
-            <input className="form-control my-2" type="password" name="password" value={password} placeholder="Password" onChange={setInputs2} />
-            <submit type="submit" className="btn btn-outline-danger" onClick={ () => {
-                authentic();
-                if(isAuth) {
-                    history.push("/main");
-                }
-                else {
-                    alert('please enter the correct credentials (userName: abc, password: 123)');
-                }
-                }
-            } >Login</submit>
+            <form>
+                <input className="form-control" value={userName} type="text" onChange={setInputs1} placeholder="UserName" />
+                <input className="form-control my-2" id="password" type="password" name="password" value={password} placeholder="Password" onChange={setInputs2} />
+                <submit type="submit" className="btn btn-outline-danger" id="login" onClick={ () => {
+                    authentic();
+                    }
+                } >Login</submit>
+            </form>
         </div>
     )
 }

@@ -10,8 +10,8 @@ const ToDoList = (props) =>{
                 <div className="row">
                     <div className="col-9 d-flex">
                     {/*  */}
-                        <input className={props.complete ? "form-check-input me-1 check__box" : "form-check-input me-1"}  id={props.id} type="checkbox"  onClick={ () => {props.onComplete(props.id)}} />
-                        <label className="item form-check-label" for={props.id} >{props.Item}</label>
+                        <input className={props.complete ? "form-check-input me-1 check__box" : "form-check-input me-1"}   type="checkbox"  onClick={ () => {props.onComplete(props.id)}} checked={props.complete} />
+                        <label className="item form-check-label"  >{props.Item}</label>
                     </div>
                     <div className="col-3">
                         <button className="btn btn-outline-danger rounded-pill" onClick={ () => {

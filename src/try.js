@@ -66,7 +66,7 @@ function Try() {
     return (
         <div className="container">
           <button className="btn btn-outline-danger mt-3" onClick={ () => history.push('/')}>Logout</button>
-          <main className="card text-center w-50  my-5 mx-auto shadow-lg">
+          <main className="card text-center   my-5 mx-2 shadow-lg">
             <div className="card-header">
                 <h1 className="card-title">ToDo List</h1>
             </div>
